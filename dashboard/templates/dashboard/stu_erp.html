@@ -1,0 +1,107 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %}
+{% load crispy_forms_tags%}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/all.css' %}">
+
+
+<div class="wrapper">
+
+
+
+
+    <div class="sidebar">
+        <!--profile image & text-->
+        <div class="profile">
+            <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg"
+                alt="profile_picture">
+            <h3>Amyy</h3>
+            <p>Designer</p>
+        </div>
+
+        <!--menu item-->
+
+        <ul>
+            <li>
+                <a href="{% url 'g_index' %}" class="active">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="item">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'profile1' %}">
+                    <span class="icon"><i class="fas fa-desktop"></i></span>
+                    <span class="item">My Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'g_index' %}">
+                    <span class="icon"><i class="fas fa-user-friends"></i></span>
+                    <span class="item">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                    <span class="item">View Vacany</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'apply_vacancy' %}">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span class="item">Appl Jobs</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'apply_vacancy' %}">
+                    <span class="icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="item">Search Jobs</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-user-shield"></i></span>
+                    <span class="item">Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-cog"></i></span>
+                    <span class="item">Logout</span>
+                </a>
+            </li>
+        </ul>
+
+
+
+    </div>
+
+
+   
+</div>
+
+<!-- 
+profile form tag -->
+
+
+
+
+
+
+<script>
+
+
+    var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function () {
+        document.querySelector("body").classList.toggle("active");
+    })
+
+</script>
+
+
+
+
+
+
+{% endblock content %}

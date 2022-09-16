@@ -1,0 +1,123 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% load crispy_forms_tags%}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+
+
+
+<section class="container text-center">
+  <h3>Welcome</h3>
+
+  <hr> <br>
+  <div class="row">
+    <div class="col-md-4">
+      <a href="{% url 'profile1' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/resume1.jpg' %}" alt="resume">
+          <div class="card-body">
+            <h5 class="card-title ">
+              RESUME
+            </h5>
+            Create Resumes to refer them later. They are stored permanently until deleted
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="{% url 'apply_vacancy' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/homework.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              VIEW VACANCY
+            </h5>
+            View Vacancy now ! They will be displayed prioritised by deadlines
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+
+
+    <div class="col-md-4">
+      <a href="{% url 'apply_vacancy' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/apply.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              APPLY VACANCY
+            </h5>
+            APPLY VACANCY and select your desired Company or Job Role.
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <hr><br><br><br><br><br>
+
+    <br><br><br><br><br>
+
+</section>
+
+<br><br><br>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6 style=>About</h6>
+        <p class="text-justify">Get Hired is an initiative to help the upcoming
+          students with a fully featured website. Get Hired focuses on providing the best placements for you.
+ Eassy to apply, Eassy to use, Eassy to comunicate.
+Makes a strong bond between students and TPO </p>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <!-- <h6 >Categories</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/category/c-language/" >C</a></li>
+          <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+          <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+          <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+          <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+          <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+        </ul> -->
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'profile2' %}">Profile</a></li>
+          <li><a href="{% url 'profile1' %}">Create Resume</a></li>
+          <li><a href="{% url 'apply_vacancy' %}">New Vacancy</a></li>
+          <li><a href="{% url 'home' %}">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text" style="margin-left: 500px;"> &copy; 2022 Get Hired
+          <!-- <a href="#">Scanfcode</a>. -->
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+{% endblock content %}
